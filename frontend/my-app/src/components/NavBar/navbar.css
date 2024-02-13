@@ -1,0 +1,30 @@
+.navbar {
+    height: 5rem;
+    width: 100vw;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.navOptionsListItem {
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.navOptionsListItem:hover {
+    color: #70a1ff;
+    border-bottom: 2px solid #70a1ff;
+}
+
+.navbarButton {
+    background: white;
+    color: black;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+}
