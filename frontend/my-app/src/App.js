@@ -1,4 +1,4 @@
-import Navbar from "./components/NavBar/navbar";
+import NavbarHeader from "./components/NavBar/navbar";
 import LeagueInfoForm from "./components/LeagueInfoForm/leagueinfoform";
 
 import './App.css';
@@ -6,7 +6,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-        <Navbar />
+        <NavbarHeader />
         <LeagueInfoForm />
     </div>
   );

@@ -1,20 +1,36 @@
 import React from 'react'
-import './navbar.css'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-scroll';
 
-const Navbar = () => {
-
+function NavbarHeader() {
     return (
-        <nav className='navbar'>
-            <div className='navOptions'>
-                <Link className='navOptionsListItem'>Home</Link>
-                <Link className='navOptionsListItem'>About Me</Link>
-                <Link className='navOptionsListItem'>Teams</Link>
-                <Link className='navOptionsListItem'>Temp</Link>
-            </div>
-            <button className='navbarButton'>Contact Me</button>
-        </nav>
-    )
-}
+      <Navbar>
+        <Container fluid>
+          <Navbar.Brand>Fantasy Basketball Assistant</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="#link">Temp</Nav.Link>
+              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">Basketball</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">
+                  Football
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Team Analysis</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action/3.4">
+                  Support Me
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    );
+  }
 
-export default Navbar;
+export default NavbarHeader;

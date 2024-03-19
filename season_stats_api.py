@@ -20,6 +20,8 @@ def get_stats():
     # rank_threshold = players in roster * num teams in league = 13 * 12 = 144
     # category = assists
 
+    # Example request: http://127.0.0.1:8000/season_stats?rank_threshold=144&cat1=pV&cat2=aV
+
     params = request.args.to_dict()
     param_list = list(params.values())
     print(param_list[0])
@@ -36,7 +38,9 @@ def get_stats():
         # Close the database connection
         conn.close()
 
-    return jsonify(data)
+    response = jsonify(data)
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 
 if __name__ == "__main__":
