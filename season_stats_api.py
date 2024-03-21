@@ -27,7 +27,7 @@ def get_stats():
     print(param_list[0])
 
     try:
-        query = """SELECT * FROM fantasy_player_stats WHERE rank >= {} ORDER BY {} DESC limit 10"""
+        query = """SELECT * FROM fantasy_player_stats WHERE rank >= {} ORDER BY `{}` DESC limit 10"""
         c.execute(query.format(params['rank_threshold'], params['cat1']))
         data = c.fetchall()
 
