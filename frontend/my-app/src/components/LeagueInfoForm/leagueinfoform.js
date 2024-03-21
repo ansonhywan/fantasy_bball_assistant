@@ -19,6 +19,7 @@ export default function LeagueInfoForm() {
   };
 
   const handleSubmit = async (event) => {
+    setHasResult(false);
     try {
       // alert(
       //   `League Size: ${formData.leagueSize}, Category 1: ${formData.category1}, Category 2: ${formData.category2}`
@@ -93,7 +94,7 @@ export default function LeagueInfoForm() {
       <br />
       <br />
       {hasResult ? (
-        <Table striped>
+        <Table responsive striped>
           <thead>
             <tr>
               <th>Round</th>
